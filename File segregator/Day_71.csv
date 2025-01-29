@@ -1,0 +1,3 @@
+PatientId,AppointmentID,Gender,ScheduledDay,AppointmentDay,Age,Neighbourhood,Scholarship,Hipertension,Diabetes,Alcoholism,Handcap,SMS_received,No_show
+822145925426128,5759318,M,2016-06-01T12:22:31Z,2016-06-01T00:00:00Z,38,REDENÇÃO,0,0,0,0,0,0,No
+99637671331,5769270,M,2016-06-03T08:40:00Z,2016-06-03T00:00:00Z,46,JABOUR,0,0,0,0,0,0,No

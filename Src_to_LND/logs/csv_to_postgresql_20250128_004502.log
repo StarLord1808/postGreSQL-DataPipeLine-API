@@ -1,0 +1,8 @@
+2025-01-28 00:45:02,164:INFO:Truncating table: "LANDING_LAYER"."appointments"
+2025-01-28 00:45:02,188:INFO:Table LANDING_LAYER.appointments truncated successfully.
+2025-01-28 00:45:02,188:INFO:Processing file: /home/starlord/ETL_PostgreSQL/Subhasis_Tasks/postGreSQL-DataPipeLine-API/Src_to_LND/Source_Path/Day_1.csv
+2025-01-28 00:45:02,335:INFO:Data loaded from /home/starlord/ETL_PostgreSQL/Subhasis_Tasks/postGreSQL-DataPipeLine-API/Src_to_LND/Source_Path/Day_1.csv.
+2025-01-28 00:45:03,489:ERROR:Invalid row at index 25144: {'patientid': 465943158731293.0, 'appointmentid': 5775010, 'gender': 'F', 'scheduledday': '2016-06-06T08:58:13Z', 'appointmentday': '2016-06-06T00:00:00Z', 'age': -1, 'neighbourhood': 'ROMÃO', 'scholarship': 0, 'hipertension': 0, 'diabetes': 0, 'alcoholism': 0, 'handcap': 0, 'sms_received': 0, 'no_show': 'No'}, Error: Invalid data: {'patientid': 465943158731293.0, 'appointmentid': 5775010, 'gender': 'F', 'scheduledday': '2016-06-06T08:58:13Z', 'appointmentday': '2016-06-06T00:00:00Z', 'age': -1, 'neighbourhood': 'ROMÃO', 'scholarship': 0, 'hipertension': 0, 'diabetes': 0, 'alcoholism': 0, 'handcap': 0, 'sms_received': 0, 'no_show': 'No'}
+2025-01-28 00:45:12,359:INFO:Data successfully inserted into LANDING_LAYER.appointments.
+2025-01-28 00:45:12,366:WARNING:Invalid rows written to /home/starlord/ETL_PostgreSQL/Subhasis_Tasks/postGreSQL-DataPipeLine-API/Src_to_LND/Bad_Files/invalid_records_20250128_004502.csv.
+2025-01-28 00:45:12,366:INFO:Source file /home/starlord/ETL_PostgreSQL/Subhasis_Tasks/postGreSQL-DataPipeLine-API/Src_to_LND/Source_Path/Day_1.csv moved to archive directory: /home/starlord/ETL_PostgreSQL/Subhasis_Tasks/postGreSQL-DataPipeLine-API/Src_to_LND/Archive_Path/Day_1.csv.

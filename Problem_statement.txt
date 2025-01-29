@@ -1,0 +1,11 @@
+Problem Statement:
+We have a client who stores their data in a PostgreSQL transactional database. Our task is to create a data pipeline that extracts data from this PostgreSQL database in real-time and loads it into another database (for now, a new database within PostgreSQL will be used for storage).
+Requirements:
+Initial Data Load: On the first run, the pipeline should extract all data from the source tables and load it into the target database.
+Change Data Capture (CDC): After the initial data load, the pipeline should monitor and capture changes (inserts, updates, and deletes) to ensure real-time synchronization between the source and target databases.
+API for Data Fetching:
+Develop an API that retrieves data from the PostgreSQL database based on specific parameters such as schema, table name, timestamp, and ID.
+If only the schema is provided, the API should return data from all tables within that schema.
+If both the schema and table name are provided, the API should return data for that specific table.
+The API should also support additional filtering based on columns like timestamp or ID to refine the data retrieval.
+The goal is to automate the process of real-time data replication and provide an API for flexible data querying based on different criteria.

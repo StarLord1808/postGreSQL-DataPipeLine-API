@@ -1,0 +1,16 @@
+2025-01-28 12:46:48,715 [INFO]: Request: GET http://localhost:8000/docs
+2025-01-28 12:46:48,716 [INFO]: Response status: 200
+2025-01-28 12:46:49,052 [INFO]: Request: GET http://localhost:8000/openapi.json
+2025-01-28 12:46:49,058 [INFO]: Response status: 200
+2025-01-28 12:47:01,402 [INFO]: Request: GET http://localhost:8000/retrieve-data?schema=FINAL_LAYER
+2025-01-28 12:47:01,425 [INFO]: Executing query: 
+                SELECT table_name
+                FROM information_schema.tables
+                WHERE table_schema = %s
+             with schema=FINAL_LAYER
+2025-01-28 12:47:01,431 [INFO]: Retrieved tables: ['pat_attendance_core']
+2025-01-28 12:47:01,431 [INFO]: Response status: 200
+2025-01-28 12:47:30,329 [INFO]: Request: GET http://localhost:8000/retrieve-data?schema=FINAL_LAYER&table=pat_attendance_core&id_column=patientid&id_value=11114485119737
+2025-01-28 12:47:30,392 [INFO]: Executing query: SELECT * FROM "FINAL_LAYER"."pat_attendance_core" WHERE patientid = %s with params=[11114485119737]
+2025-01-28 12:47:30,406 [INFO]: Query executed successfully. Rows retrieved: 1
+2025-01-28 12:47:30,419 [INFO]: Response status: 200

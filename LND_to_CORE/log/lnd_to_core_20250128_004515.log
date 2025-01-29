@@ -1,0 +1,6 @@
+2025-01-28 00:45:15,516:INFO:Starting ETL process from Landing to Core.
+2025-01-28 00:45:15,516:INFO:Fetching data from Database A (Source).
+2025-01-28 00:45:15,542:INFO:Source Connection established.
+2025-01-28 00:45:16,364:INFO:Data is available in the Landing layer. Proceeding with upsert.
+2025-01-28 00:45:16,384:INFO:Target Connection established.
+2025-01-28 00:46:01,558:INFO:ETL process completed successfully.
