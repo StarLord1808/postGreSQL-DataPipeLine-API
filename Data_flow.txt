@@ -1,0 +1,38 @@
+**Data Flow: From Source to Final Layer**
+
+## **1. Source Layer**
+- **Source:** CSV file
+- **Destination Database:** `hospital`
+- **Schema:** `LANDING`
+- **Process:**
+  - CSV data is ingested into the `LANDING` schema of the `hospital` database.
+  - Initial raw data validation and integrity checks are performed.
+  - **Truncate Load:** The `LANDING` layer follows a truncate and reload strategy, meaning old data is completely removed before new data is loaded.
+
+## **2. Transformation & Processing**
+- **Intermediate Steps:**
+  - Data cleansing, standardization, and deduplication.
+  - Necessary transformations applied for consistency.
+  - Data is prepared for Change Data Capture (CDC) implementation.
+
+## **3. Change Data Capture (CDC) Logic**
+- **Key Field:** `PATIENT_ID`
+- **CDC Implementation:**
+  - If `PATIENT_ID` already exists in the `FINAL_LAYER`, the record is updated by marking the previous record as inactive.
+  - If `PATIENT_ID` is new, the record is inserted as a new entry.
+
+## **4. Slowly Changing Dimension (SCD) Type 2 Implementation**
+- **Purpose:** Maintain a historical record of changes.
+- **Steps:**
+  - New changes result in an update to the existing record while keeping historical records.
+  - Previous records are versioned with an `END_DATE` and marked inactive.
+  - New records get a fresh `START_DATE` and remain active until an update occurs.
+
+## **5. Final Layer**
+- **Destination Database:** `core`
+- **Schema:** `FINAL_LAYER`
+- **Process:**
+  - Transformed data is loaded into the `FINAL_LAYER` schema.
+  - Maintains up-to-date and historical patient records using SCD Type 2.
+  - Provides clean, structured, and versioned data for analytical and operational use.
+
